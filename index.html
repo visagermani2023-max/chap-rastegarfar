@@ -169,6 +169,26 @@
       .calc-result span { display: block; font-size: 13px; color: var(--ink-soft); }
       .calc-result b { font-size: 19px; color: var(--teal); font-weight: 900; }
 
+
+      /* ---------- Order form ---------- */
+      .order-form { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 24px; }
+      .order-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      @media (max-width: 640px) { .order-grid { grid-template-columns: 1fr; } }
+      .order-full { grid-column: 1 / -1; }
+      .order-form label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+      .order-form input, .order-form select, .order-form textarea {
+        width: 100%; font-family: inherit; font-size: 16px; padding: 10px 12px;
+        border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink);
+        min-height: 48px;
+      }
+      .order-form textarea { min-height: 0; line-height: 1.7; resize: vertical; }
+      .order-submit { margin-top: 16px; border: none; cursor: pointer; font-family: inherit; }
+      .order-result { margin-top: 20px; background: var(--surface-2); border-radius: 12px; padding: 16px; }
+      .order-result textarea { background: var(--surface); }
+      .order-hint { color: var(--ink-soft); font-size: 14.5px; margin: 10px 0 0; }
+      .order-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+      .order-actions button.btn { border: none; cursor: pointer; font-family: inherit; }
+
       /* ---------- Steps ---------- */
       .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: step; }
       @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, 1fr); } }
@@ -227,10 +247,11 @@
         </a>
         <nav class="main-nav" aria-label="بخش‌های سایت">
           <a href="#services">خدمات و قیمت‌ها</a>
+          <a href="#order">ثبت سفارش</a>
           <a href="#steps">مراحل سفارش</a>
           <a href="#contact">تماس و آدرس</a>
         </nav>
-        <a class="btn btn-primary header-cta" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">ثبت سفارش</a>
+        <a class="btn btn-primary header-cta" href="#order">ثبت سفارش</a>
       </div>
     </header>
 
@@ -242,7 +263,7 @@
             <h1>هر چی برای دیده‌شدن مغازه‌ت لازمه، <span class="hl">اینجا چاپ می‌شه</span></h1>
             <p class="lead">از پرچم ساحلی و بنر گرفته تا کارت ویزیت، مهر و چاپ روی لیوان و تیشرت؛ با طراحی رایگان و پیش‌نمایش قبل از چاپ، اینجاییم که کارت رو راحت و بی‌دردسر تحویل بگیری.</p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">ثبت سفارش آنلاین</a>
+              <a class="btn btn-primary" href="#order">ثبت سفارش</a>
               <a class="btn btn-ghost" href="tel:+989300351532">تماس: ۰۹۳۰۰۳۵۱۵۳۲</a>
             </div>
             <div class="hero-points">
@@ -260,7 +281,7 @@
             <span class="tag">پیشنهاد ویژه</span>
             <b>پرچم ساحلی دولایه براق کره‌ای: ۲٬۷۵۰٬۰۰۰ تومان</b>
             <span>فقط تا ۵ آذر</span>
-            <a href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">همین حالا سفارش بده</a>
+            <a href="#order">همین حالا سفارش بده</a>
           </div>
         </div>
       </div>
@@ -287,7 +308,7 @@
                   <li><span>کامل سه‌لایه براق کره‌ای</span><span class="p">۲٬۸۵۰٬۰۰۰ <small>تومان</small></span></li>
                   <li><span>پارچه تنها</span><span class="p">از ۱٬۶۰۰٬۰۰۰ <small>تومان</small></span></li>
                 </ul>
-                <a class="btn btn-teal" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">سفارش پرچم ساحلی</a>
+                <a class="btn btn-teal" href="https://rubika.ir/gorgan_mohr" target="_blank" rel="noopener">سفارش پرچم ساحلی در روبیکا</a>
               </div>
             </article>
 
@@ -304,7 +325,7 @@
                   <li><span>مش و وینیل</span><span class="p">از متری ۱٬۱۵۰٬۰۰۰ <small>تومان</small></span></li>
                   <li><span>طراحی بنر</span><span class="p">رایگان</span></li>
                 </ul>
-                <a class="btn btn-teal" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">سفارش بنر</a>
+                <a class="btn btn-teal" href="https://rubika.ir/gorgan_mohr" target="_blank" rel="noopener">سفارش بنر در روبیکا</a>
               </div>
             </article>
 
@@ -334,7 +355,7 @@
                   <li><span>موبی ۳۰</span><span class="p">از ۱٬۳۰۰٬۰۰۰ <small>تومان</small></span></li>
                   <li><span>موبی ۴۰</span><span class="p">از ۱٬۸۰۰٬۰۰۰ <small>تومان</small></span></li>
                 </ul>
-                <a class="btn btn-teal" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">سفارش مهر</a>
+                <a class="btn btn-teal" href="https://rubika.ir/gorgan_mohr" target="_blank" rel="noopener">سفارش مهر در روبیکا</a>
               </div>
             </article>
 
@@ -350,7 +371,7 @@
                   <li><span>تیشرت</span><span class="p">از ۶۵۰٬۰۰۰ <small>تومان</small></span></li>
                   <li><span>چاپ روی قاب گوشی</span><span class="p">۶۰۰٬۰۰۰ <small>تومان</small></span></li>
                 </ul>
-                <a class="btn btn-teal" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">سفارش سابلیمیشن</a>
+                <a class="btn btn-teal" href="https://rubika.ir/gorgan_mohr" target="_blank" rel="noopener">سفارش سابلیمیشن در روبیکا</a>
               </div>
             </article>
 
@@ -395,12 +416,64 @@
             <p>از ثبت سفارش تا تحویل، فقط پنج قدم:</p>
           </div>
           <div class="steps">
-            <div class="step"><span class="num">۱</span><b>ثبت سفارش</b><p>فرم ثبت سفارش رو پر کن یا توی روبیکا پیام بده.</p></div>
+            <div class="step"><span class="num">۱</span><b>ثبت سفارش در سایت و ارسال در روبیکا</b><p>فرم سفارش همین سایت رو پر کن، متنش رو کپی کن و توی روبیکا برامون بفرست.</p></div>
             <div class="step"><span class="num">۲</span><b>طراحی رایگان</b><p>طرحت رو آماده می‌کنیم و پیش‌نمایشش رو می‌فرستیم.</p></div>
             <div class="step"><span class="num">۳</span><b>تأیید طرح</b><p>پیش‌نمایش رو ببین؛ اگه جایی نیاز به تغییر داشت، اصلاحش می‌کنیم.</p></div>
             <div class="step"><span class="num">۴</span><b>پرداخت کامل</b><p>بعد از تأیید طرح، مبلغ رو کامل پرداخت می‌کنی.</p></div>
             <div class="step"><span class="num">۵</span><b>چاپ و تحویل</b><p>کارت چاپ می‌شه و از مغازه تحویلش می‌گیری.</p></div>
           </div>
+        </div>
+      </section>
+
+      <!-- Order form -->
+      <section id="order">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>ثبت سفارش</h2>
+            <p>سفارشت رو اینجا بنویس و توی روبیکا برامون بفرست</p>
+          </div>
+          <form class="order-form" id="order-form">
+            <div class="order-grid">
+              <div>
+                <label for="ord-name">نام</label>
+                <input id="ord-name" type="text" required autocomplete="given-name" placeholder="مثلاً محمد" />
+              </div>
+              <div>
+                <label for="ord-family">نام خانوادگی</label>
+                <input id="ord-family" type="text" required autocomplete="family-name" placeholder="مثلاً محمدی" />
+              </div>
+              <div>
+                <label for="ord-phone">شماره تماس</label>
+                <input id="ord-phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲ ·······" />
+              </div>
+              <div>
+                <label for="ord-service">نوع خدمت</label>
+                <select id="ord-service" required>
+                  <option value="">انتخاب کن…</option>
+                  <option>پرچم ساحلی</option>
+                  <option>بنر و چاپ پهن</option>
+                  <option>کارت ویزیت</option>
+                  <option>ساخت مهر</option>
+                  <option>چاپ سابلیمیشن (لیوان، تیشرت و…)</option>
+                  <option>سایر</option>
+                </select>
+              </div>
+              <div class="order-full">
+                <label for="ord-details">توضیحات سفارش</label>
+                <textarea id="ord-details" rows="4" required placeholder="مثلاً: متن و اسم روی کار، رنگ، اندازه، تعداد و هر چیزی که لازمه بدونیم…"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary order-submit" type="submit">ساخت متن سفارش</button>
+            <div class="order-result" id="order-result" hidden>
+              <label for="ord-text">متن سفارشت آماده‌ست:</label>
+              <textarea id="ord-text" rows="7" readonly></textarea>
+              <p class="order-hint">این متن رو کپی کن، بعد دکمه «ارسال سفارش در روبیکا» رو بزن و متن رو اونجا پیست کن و بفرست تا سفارشت دستمون برسه.</p>
+              <div class="order-actions">
+                <button class="btn btn-teal" type="button" id="ord-copy">کپی متن سفارش</button>
+                <a class="btn btn-primary" href="https://rubika.ir/gorgan_mohr" target="_blank" rel="noopener">ارسال سفارش در روبیکا</a>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
 
@@ -437,8 +510,8 @@
             </div>
             <div class="order-box">
               <h3>حاضری سفارشت رو بدی؟</h3>
-              <p>فرم ثبت سفارش رو پر کن؛ مشخصات کارت رو می‌فرستی، ما طراحی رایگان و پیش‌نمایش رو برات آماده می‌کنیم.</p>
-              <a class="btn btn-primary" href="https://forms.gle/T5r1iGjRRJH8qC9Z8" target="_blank" rel="noopener">رفتن به فرم ثبت سفارش</a>
+              <p>فرم سفارش همین سایت رو پر کن؛ متن سفارشت آماده می‌شه، کپی‌اش کن و توی روبیکا برامون بفرست تا طراحی رایگان و پیش‌نمایش رو آماده کنیم.</p>
+              <a class="btn btn-primary" href="#order">پر کردن فرم سفارش</a>
               <p>اگه عجله داری یا سؤالی پیش اومد، زنگ بزن:</p>
               <a class="phone-big" href="tel:+989300351532" dir="ltr">۰۹۳۰۰۳۵۱۵۳۲</a>
             </div>
@@ -481,6 +554,37 @@
           el.addEventListener('change', calc);
         });
         calc();
+      })();
+    </script>
+    <script>
+      (function () {
+        var form = document.getElementById('order-form');
+        if (!form) return;
+        var result = document.getElementById('order-result');
+        var textBox = document.getElementById('ord-text');
+        var copyBtn = document.getElementById('ord-copy');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var lines = [
+            'سفارش جدید از سایت چاپ رستگارفر',
+            'نام: ' + document.getElementById('ord-name').value.trim(),
+            'نام خانوادگی: ' + document.getElementById('ord-family').value.trim(),
+            'شماره تماس: ' + document.getElementById('ord-phone').value.trim(),
+            'نوع خدمت: ' + document.getElementById('ord-service').value,
+            'توضیحات سفارش: ' + document.getElementById('ord-details').value.trim()
+          ];
+          textBox.value = lines.join('\n');
+          result.hidden = false;
+          copyBtn.textContent = 'کپی متن سفارش';
+          result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        copyBtn.addEventListener('click', function () {
+          function done() { copyBtn.textContent = 'کپی شد ✓'; }
+          function fallback() { textBox.select(); document.execCommand('copy'); done(); }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textBox.value).then(done, fallback);
+          } else { fallback(); }
+        });
       })();
     </script>
   </body>
