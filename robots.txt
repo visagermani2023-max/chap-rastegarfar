@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://visagermani2023-max.github.io/chap-rastegarfar/sitemap.xml
